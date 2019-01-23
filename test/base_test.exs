@@ -164,7 +164,7 @@ defmodule Pbkdf2.BaseTest do
 
   test "wrong length salt to hash_password" do
     assert_raise ArgumentError, ~r/The salt is the wrong length/, fn ->
-      Base.hash_password("password", "salt")
+      Base.hash_password("password", "foo")
     end
   end
 
